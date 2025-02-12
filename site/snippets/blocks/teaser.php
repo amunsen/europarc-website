@@ -13,6 +13,7 @@
             <?php echo $block->description() ?>
           </p>
         </div>
+        <?php if ($block->bullets()->isNotEmpty()): ?>
         <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-12 lg:gap-16 xl:gap-24">
             <?php foreach ($block->bullets()->toStructure() as $bullet): ?>
               <div class="cols-span-1 flex flex-col gap-3">
@@ -20,7 +21,7 @@
                   <h3 class="font-small font-semibold"><?php echo $bullet->meta() ?></h3>
                 <?php else: ?>
                   <br class="hidden sm:block"/>
-<?php endif; ?>
+  <?php endif; ?>
                 <h4 class="font-medium line-height-tight">
                   <span class="truncate"><?php echo $bullet->titlei() ?></span>
                   <br/>
@@ -32,6 +33,7 @@
               </div>
             <?php endforeach?>
         </div>
+        <?php endif; ?>
       </div>
 <?php endsnippet()?>
 </div>

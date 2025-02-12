@@ -1,0 +1,21 @@
+name: Editorial
+label: "{{title}}"
+icon: newspaper
+fields:
+   headline:
+    label: Headline
+    type: text
+  headlineII:
+    label: Headline
+    type: text
+  description:
+    label: Description
+    type: text
+  descriptionII:
+    label: Description
+    type: text
+  image:
+    label: Image
+    type: files
+    multiple: false
+    query: site.find("image").files
