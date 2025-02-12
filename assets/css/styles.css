@@ -1039,6 +1039,10 @@ video {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .text-cararra-600 {
   --tw-text-opacity: 1;
   color: rgb(129 130 93 / var(--tw-text-opacity, 1));

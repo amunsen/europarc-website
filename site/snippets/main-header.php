@@ -7,7 +7,20 @@
             <?php snippet('logo')?>
           </a>
         </div>
-        <div class="flex-1 flex items-center justify-end text-carrary-950">
+        <div class="flex-1 flex items-center justify-end text-carrary-950 gap-4" >
+        <nav class="languages">
+                      <ul>
+                        <?php foreach ($kirby->languages() as $language): ?>
+<?php if ($kirby->language() != $language->code()): ?>
+                            <li<?php e($kirby->language() == $language, ' class="active"')?>>
+                              <a class="font-semibold uppercase" href="<?php echo $language->url() ?>" hreflang="<?php echo $language->code() ?>">
+                                <?php echo html($language->code()) ?>
+                              </a>
+                            </li>
+                          <?php endif?>
+<?php endforeach?>
+                      </ul>
+                    </nav>
           <button class="js-menu w-12 h-12 flex items-center justify-center rounded-full bg-cararra-100 hover:bg-cararra-200 transition-all" aria-haspopup="true" aria-expanded="false" aria-controls="menu">
             <div class="w-6 h-6">
               <svg class="menu-open block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
