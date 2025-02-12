@@ -1,6 +1,6 @@
 					<div class="py-2 md:py-4 lg:py-6">
 						<?php snippet('container', slots: true)?>
-							<div class="flex gap-3">
+							<div class="flex flex-col items-center md:flex-row gap-3">
 								© EUROPARC Dreilinden GMBH 2024
 								<a href="<?php echo $pages->find('legal')->url() ?>">
 									<?php echo $pages->find('legal')->title() ?>

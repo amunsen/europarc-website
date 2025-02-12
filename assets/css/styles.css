@@ -604,8 +604,16 @@ video {
   position: sticky;
 }
 
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
 .left-0 {
   left: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
 }
 
 .top-0 {
@@ -614,14 +622,6 @@ video {
 
 .top-1\/2 {
   top: 50%;
-}
-
-.bottom-3 {
-  bottom: 0.75rem;
-}
-
-.left-1\/2 {
-  left: 50%;
 }
 
 .z-20 {
@@ -711,6 +711,10 @@ video {
   height: 2rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .h-\[1px\] {
   height: 1px;
 }
@@ -719,16 +723,8 @@ video {
   height: 240px;
 }
 
-.h-\[80px\] {
-  height: 80px;
-}
-
 .h-full {
   height: 100%;
-}
-
-.h-\[100px\] {
-  height: 100px;
 }
 
 .max-h-56 {
@@ -795,13 +791,13 @@ video {
   flex-grow: 1;
 }
 
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -891,22 +887,14 @@ video {
   border-radius: 9999px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
 .bg-cararra-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(236 238 231 / var(--tw-bg-opacity, 1));
+}
+
+.bg-cararra-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 40 30 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-600 {
@@ -926,11 +914,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-cararra-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(42 40 30 / var(--tw-bg-opacity, 1));
 }
 
 .fill-black {
@@ -961,6 +944,11 @@ video {
   padding-right: 1.25rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -984,21 +972,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .pb-0 {
@@ -1773,6 +1746,10 @@ p {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:gap-12 {

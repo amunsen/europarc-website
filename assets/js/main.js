@@ -129,31 +129,19 @@ function scroller() {
 
   $(window).on("scroll", function () {
     const currentScroll = $(this).scrollTop();
+    const threshold = 50; // Adjust this value to control sensitivity
 
-    if (currentScroll > lastScrollTop) {
-      // Scrolling down
-      $element.css({ transform: "translateY(140%)" });
-    } else {
-      // Scrolling up
-      $element.css({ transform: "translateY(0%)" });
+    if (Math.abs(currentScroll - lastScrollTop) > threshold) {
+      if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        $element.css({ transform: "translate(-50%, 140%)" });
+      } else {
+        // Scrolling up
+        $element.css({ transform: "translate(-50%, 0%)" });
+      }
+      lastScrollTop = currentScroll;
     }
-
-    lastScrollTop = currentScroll;
   });
-
-  // $(window).on("scroll", function () {
-  //   const currentScroll = $(this).scrollTop();
-  //   if (currentScroll > lastScrollTop) {
-  //     alert("scroll down");
-  //     // Scrolling down
-  //     $("#js-contact").addClass("hidden").fadeOut();
-  //   } else {
-  //     // Scrolling up
-  //     $("#js-contact").removeClass("hidden").fadeIn();
-  //   }
-
-  //   lastScrollTop = currentScroll;
-  // });
 }
 
 function slickGallery() {
