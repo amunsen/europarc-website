@@ -11,6 +11,9 @@ fields:
   description:
     label: Description
     type: text
+  detaildescription:
+    label: Detail Description
+    type: text
   slider:
     type: structure
     fields:

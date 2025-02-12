@@ -1,0 +1,19 @@
+name: Get In Touch
+label: "{{title}}"
+icon: mail
+fields:
+   headline:
+    label: Headline
+    type: text
+  description:
+    label: Description
+    type: text
+  emailcta:
+    label: E-Mail CTA
+    type: text
+  email:
+    label: E-Mail CTA
+    type: email
+  emaildetail:
+    label: E-Mail Detail
+    type: text

@@ -11,6 +11,24 @@ fields:
   description:
     label: Description
     type: text
+  bullets:
+    type: structure
+    fields:
+      classes:
+        label: Classes
+        type: text
+      meta:
+        label: Meta
+        type: text
+      titleI:
+        label: Title I
+        type: text
+      titleII:
+        label: Title I
+        type: text
+      description:
+        label: Description
+        type: text
   video:
     label: Video?
     type: toggle

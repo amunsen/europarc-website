@@ -30,7 +30,6 @@ function teaserVideo() {
   if (document.getElementById("teaser-video")) {
     $(window).on("scroll", function () {
       if (elementIsVisibleInViewport(document.getElementById("teaser-video"))) {
-        //console.log($("#teaser-video").find("video"));
         !video && $("#teaser-video").find("video").get(0).play();
       }
     });

@@ -99,6 +99,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss03" on !important;
 }
 
 nav ul {
@@ -115,8 +116,8 @@ p {
 
 h4,
 .h4 {
-  font-weight: 400;
-  font-size: 1.25rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   line-height: 116%;
   letter-spacing: -0.0225rem;
   font-feature-settings: "ss01" 1;
@@ -214,10 +215,13 @@ p {
 }
 
 .font-small {
-  //font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 148%;
   letter-spacing: 0.06rem;
+
+  @media screen(sm) {
+    font-size: 0.875rem;
+  }
 
   @media screen(md) {
     font-size: 1rem;

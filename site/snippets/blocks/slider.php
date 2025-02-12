@@ -3,13 +3,16 @@
       <!-- Title Section -->
       <div class="flex flex-col gap-6 md:gap-8 py-6 pb-12 sm:py-8 sm:pb-16">
         <h2 class="text-cararra-950">
-          <?=$block->headline()?>
+          <?php echo $block->headline() ?>
           <br/>
-          <?=$block->headlineii()?>
+          <?php echo $block->headlineii() ?>
         </h2>
-        <div class="py-6 pt-0 sm:py-8 sm:pt-0 lg:max-w-[72vh]">
-          <p class="h3 text-cararra-950">
-            <?=$block->description()?>
+        <div class="flex flex-col gap-4 py-6 pt-0 sm:py-8 sm:pt-0 lg:max-w-[72vh]">
+          <p class="h4 font-medium text-cararra-950">
+            <?php echo $block->description() ?>
+          </p>
+          <p class="p font-medium text-cararra-950">
+            <?php echo $block->detaildescription() ?>
           </p>
         </div>
       </div>
@@ -26,10 +29,10 @@
   >
     <div class="relative flex-1 w-full lg:max-w-96 h-full max-h-56 lg:max-h-full">
       <?php $index = 0?>
-      <?php foreach ($block->slider()->toStructure() as $slider): ?>
-        <?php snippet('slider/column', ['slider' => $slider, 'zIndex' => 5 - $index])?>
-        <?php $index++?>
-      <?php endforeach;?>
+<?php foreach ($block->slider()->toStructure() as $slider): ?>
+<?php snippet('slider/column', ['slider' => $slider, 'zIndex' => 5 - $index])?>
+<?php $index++?>
+<?php endforeach; ?>
     </div>
     <div class="flex-1 w-full lg:h-full bg-cararra-100 overflow-hidden">
       <div
@@ -37,14 +40,14 @@
         class="relative w-full h-full bg-cararra-100 overflow-hidden"
       >
         <?php $index = 0?>
-        <?php foreach ($block->slider()->toStructure() as $slider): ?>
-          <?php if ($i = $slider->image()->toFile()): ?>
-            <div style="z-index:<?=5 - $index?>" class="js-image-wrapper absolute top-0 left-0 w-full h-full overflow-hidden">
-              <img loading="lazy" class="js-image-wrapper-img w-full h-full object-cover" src="<?=$i->thumb(['format' => 'webp', 'quality' => 60])->url()?>" alt="<?=$block->headlinei() . $block->headlineii()?>">
+<?php foreach ($block->slider()->toStructure() as $slider): ?>
+<?php if ($i = $slider->image()->toFile()): ?>
+            <div style="z-index:<?php echo 5 - $index ?>" class="js-image-wrapper absolute top-0 left-0 w-full h-full overflow-hidden">
+              <img loading="lazy" class="js-image-wrapper-img w-full h-full object-cover" src="<?php echo $i->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $i->alt()->esc() ?>">
               <?php $index++?>
             </div>
-          <?php endif;?>
-        <?php endforeach;?>
+          <?php endif; ?>
+<?php endforeach; ?>
       </div>
     </div>
   </div>

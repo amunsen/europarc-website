@@ -1,0 +1,11 @@
+title: Image
+
+accept:
+  mime: image/* # Allows all image types (jpg, png, gif, webp, etc.)
+
+fields:
+  alt:
+    label: Alt Text
+    type: text
+    required: true
+    help: "Describe the image for accessibility and SEO."
