@@ -1,0 +1,10 @@
+name: Accordion
+label: "{{title}}"
+icon: 🗂️
+fields:
+  title:
+    type: text
+  description:
+    type: textarea
+  divider:
+    type: line

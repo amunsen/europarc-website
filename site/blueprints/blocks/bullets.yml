@@ -1,0 +1,4 @@
+name: Bullets
+label: "{{title}}"
+fields:
+  bullets: fields/bullets

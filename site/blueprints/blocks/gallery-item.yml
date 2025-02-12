@@ -1,0 +1,18 @@
+name: Gallery Item
+label: "{{title}}"
+icon: 🦸🏼
+fields:
+  span:
+    label: Grid
+    type: select
+    options:
+      - col-span-2
+      - col-span-3
+      - col-span-6
+  image:
+    label: Image
+    type: files
+    multiple: false
+    query: site.find("image").files
+  divider:
+    type: line

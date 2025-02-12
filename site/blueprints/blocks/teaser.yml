@@ -1,0 +1,36 @@
+name: Teaser
+label: "{{title}}"
+icon: billboard
+fields:
+   headline:
+    label: Headline
+    type: text
+  headlineII:
+    label: Headline
+    type: text
+  description:
+    label: Description
+    type: text
+  video:
+    label: Video?
+    type: toggle
+  videoFile:
+    label: Video name
+    type: text
+  videoCover:
+    label: Video cover
+    type: files
+    multiple: false
+    query: site.find("image").files
+  image:
+    type: structure
+    fields:
+      image:
+        type: files
+        multiple: false
+        query: site.find("image").files
+      description:
+        label: Description
+        type: text
+  divider:
+    type: line

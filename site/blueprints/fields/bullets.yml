@@ -1,0 +1,38 @@
+label: Bullet
+type: structure
+
+fields:
+  icon:
+    label: Icon
+    type: select
+    options:
+      - arrowRight
+      - arrowUpRight
+      - close
+      - sparkling
+      - transform
+      - infrastructure
+      - mobility
+      - companies
+      - park
+  # image?: IImage;
+  bulletimage:
+    label: Stage Image
+    type: files
+    multiple: false
+    query: site.find("image").files
+  classes:
+    label: Classes
+    type: text
+  titleI:
+    label: Title I
+    type: text
+  titleII:
+    label: Title I
+    type: text
+  descriptionShown:
+    label: Description
+    type: toggle
+  description:
+    label: Description
+    type: text

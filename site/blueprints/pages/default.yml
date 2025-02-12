@@ -1,0 +1,23 @@
+icon: 🏠
+title: Text
+template: text
+tabs:
+  content:
+    label: Content
+    icon: text
+    columns:
+      main:
+        type: fields
+        fields:
+          pageContent:
+            type: blocks
+            fieldsets:
+              - hero
+              - bullets
+              - teaser
+              - specs
+              - slider
+              - next
+              - map
+              - longtext
+              - vacancy

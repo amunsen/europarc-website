@@ -1,0 +1,9 @@
+name: Longtext
+label: "{{title}}"
+icon: 🎯
+fields:
+  text:
+    label: Text
+    type: textarea
+  divider:
+    type: line

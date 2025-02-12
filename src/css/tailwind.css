@@ -1,0 +1,445 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-Light.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-Light.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-LightItalic.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-LightItalic.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-Regular.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-Regular.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-Italic.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-Italic.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-Medium.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-Medium.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-MediumItalic.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-MediumItalic.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-Bold.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-Bold.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-BoldItalic.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-Black.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-Black.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/satoshi/Satoshi-BlackItalic.woff2") format("woff2"),
+    url("/assets/fonts/satoshi/Satoshi-BlackItalic.woff") format("woff"),
+    url("/assets/fonts/satoshi/Satoshi-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav ul {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-feature-settings: "dlig" on;
+}
+
+h4,
+.h4 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 116%;
+  letter-spacing: -0.0225rem;
+  font-feature-settings: "ss01" 1;
+
+  @media screen(md) {
+    font-size: 1.625rem;
+    line-height: 144%;
+    letter-spacing: -0.05rem;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 120%;
+  letter-spacing: -0.06rem;
+
+  @media screen(md) {
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: -0.08rem;
+  }
+}
+
+h2,
+.h2 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 120%;
+  letter-spacing: -0.088rem;
+
+  @media screen(md) {
+    font-size: 3rem;
+    line-height: 116%;
+    letter-spacing: -0.15rem;
+  }
+}
+
+h1,
+.h1 {
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 116%;
+  letter-spacing: -0.113rem;
+
+  @media screen(md) {
+    font-size: 3.875rem;
+    line-height: 110%;
+    letter-spacing: -0.2rem;
+  }
+
+  @media screen(lg) {
+    font-size: clamp(4rem, 5vw, 8rem);
+    line-height: 104%;
+    letter-spacing: -0.24rem;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 142%;
+  letter-spacing: 0;
+  font-feature-settings: "ss01" 1;
+
+  @media screen(md) {
+    font-size: 1.125rem;
+  }
+
+  @media screen(lg) {
+    font-size: 1.25rem;
+  }
+}
+
+.font-uppercase {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.2rem;
+
+  @media screen(md) {
+    font-size: 1rem;
+  }
+}
+
+.font-button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+
+  @media screen(md) {
+    font-size: 1.125rem;
+  }
+}
+
+.font-small {
+  //font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 148%;
+  letter-spacing: 0.06rem;
+
+  @media screen(md) {
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+  }
+}
+
+.mapboxgl-ctrl-attrib-inner {
+  display: none;
+}
+
+#js-gallery .container {
+  height: inherit;
+}
+
+/* this gets applied for ligatures to ensuring to maintain them. A letterspacing applied will break them */
+.ligature {
+  letter-spacing: 0;
+}
+
+.line-height-tight {
+  line-height: 114%;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(
+    rgba(255, 255, 255, 0.88),
+    rgba(255, 255, 255, 0.72)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  fill: white;
+  -moz-box-shadow: -5px -5px 5px #888;
+  -webkit-box-shadow: -5px -5px 5px #888;
+  box-shadow: -5px -5px 5px #888;
+}
+
+.cover {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.32) 40%
+  );
+}
+
+.cover:after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  mask: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+  backdrop-filter: blur(2px);
+}
+
+.cover-top:after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  mask: linear-gradient(to top, transparent, rgba(0, 0, 0, 1));
+  backdrop-filter: blur(2px);
+}
+
+.cover-transparent {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.24);
+  mask: linear-gradient(to top, transparent, rgba(0, 0, 0, 1) 40%);
+  backdrop-filter: blur(2px);
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 2rem 0.85rem;
+
+  color: white;
+  line-height: 100%;
+
+  border-radius: 2rem;
+  background: black;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateX(-100%);
+  transition: transform 0.16s ease-in-out;
+}
+
+.button:hover:after {
+  transform: translateX(0%);
+}
+
+.button-icon {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.56rem;
+}
+
+.button-icon.button-small {
+  padding-top: 0.25rem;
+  padding-bottom: 0.3rem;
+  padding-right: 0.4rem;
+}
+
+.button-small {
+  padding: 0.35rem 1.25rem 0.5rem;
+}
+
+.button-inverted {
+  border: 0.016rem solid rgba(255, 255, 255, 0.88);
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.72),
+    rgba(255, 255, 255, 0.8)
+  );
+  backdrop-filter: blur(4px);
+  color: black;
+}
+
+.button-inverted:after {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.button-inverted-shade {
+  color: black;
+  border: 0.016rem solid rgba(255, 255, 255, 0.96);
+
+  background: rgba(232, 232, 232, 0.72)
+    linear-gradient(to right, transparent, transparent);
+  backdrop-filter: blur(4px);
+}
+
+.button-inverted-shade:after {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 theme(padding.6);
+  max-width: theme(maxWidth.7xl);
+
+  @media screen(md) {
+    padding: 0 theme(padding.8);
+  }
+
+  @media screen(lg) {
+    padding: 0 theme(padding.10);
+  }
+}
+
+.hero,
+.teaser {
+  width: 100vw;
+  height: 72vh;
+
+  @media screen(lg) {
+    height: 80vh;
+  }
+}
+
+#map {
+  //position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90vh;
+}
+
+.slick-custom-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 40;
+  top: 50%;
+  left: theme(padding.2);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.32);
+  transform: translateY(-50%);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slick-custom-arrow--right {
+  left: initial;
+  right: theme(padding.2);
+}
+
+::-webkit-media-controls {
+  display: none !important;
+}

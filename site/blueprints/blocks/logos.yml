@@ -1,0 +1,11 @@
+name: Logos
+label: "{{title}}"
+icon: 🎯
+fields:
+  logos:
+    label: Logos
+    type: files
+    multiple: true
+    query: site.find("image").files
+  divider:
+    type: line

@@ -1,0 +1,31 @@
+name: Specs
+label: "{{title}}"
+icon: 💯
+fields:
+  header: fields/headlineGroup
+  specsHeadline:
+    label: Specs
+    type: structure
+    fields:
+      size:
+        label: Size
+        type: number
+      unit:
+        label: Unit
+        type: text
+      title:
+        label: Title
+        type: text
+  specs:
+    label: Specs
+    type: structure
+    fields:
+      size:
+        label: Size
+        type: number
+      unit:
+        label: Unit
+        type: text
+      title:
+        label: Title
+        type: text

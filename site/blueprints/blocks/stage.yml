@@ -1,0 +1,22 @@
+name: Stage
+label: "{{title}}"
+icon: 🎤
+fields:
+  classes:
+    label: Classes
+    type: text
+  header: fields/headlineGroup
+  target:
+    label: Target
+    type: text
+  buttonLabel:
+    label: Button Label
+    type: text
+  bullets: fields/bullet
+  image:
+    label: Stage Image
+    type: files
+    multiple: false
+    query: site.find("image").files
+  divider:
+    type: line

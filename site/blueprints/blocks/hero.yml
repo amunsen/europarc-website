@@ -1,0 +1,18 @@
+name: Hero
+label: "{{title}}"
+icon: 🦸🏼
+fields:
+  header: fields/headlineGroup
+  video:
+    label: Video?
+    type: toggle
+  videoFile:
+    label: Video name
+    type: text
+  image:
+    label: Hero Image
+    type: files
+    multiple: false
+    query: site.find("image").files
+  divider:
+    type: line

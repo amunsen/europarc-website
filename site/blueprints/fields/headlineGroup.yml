@@ -1,0 +1,16 @@
+label: Headline Group
+type: group
+
+fields:
+  headlineI:
+    label: Headline I
+    type: text
+  headlineII:
+    label: Headline II
+    type: text
+  description:
+    label: Description
+    type: text
+  descriptionI:
+    label: Description I
+    type: text
