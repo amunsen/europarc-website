@@ -20,7 +20,7 @@
   </div>
 </div>
 
-<div style="transform:translateY(-100%)" id="js-menu-panel" class="z-40 absolute top-0 left-0 bg-white pt-24 sm:pt-32 lg:pt-40 py-12 sm:py-16 lg:py-24 w-dvw transition-transform duration-[0.72s]">
+<div style="transform:translateY(-100%)" id="js-menu-panel" class="z-40 absolute top-0 left-0 bg-cararra-100 pt-24 sm:pt-32 lg:pt-40 py-12 sm:py-16 lg:py-24 w-dvw transition-transform duration-[0.72s]">
 <?php snippet('container', slots: true)?>
 <?php snippet('grid', slots: true)?>
 <?php snippet('nav-item', ['target' => 'current-campus'])?>

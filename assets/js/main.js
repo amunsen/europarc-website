@@ -123,6 +123,39 @@ function toggleMainNavigation() {
   });
 }
 
+function scroller() {
+  let lastScrollTop = 0;
+  const $element = $("#js-contact"); // Replace with your actual element ID
+
+  $(window).on("scroll", function () {
+    const currentScroll = $(this).scrollTop();
+
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down
+      $element.css({ transform: "translateY(140%)" });
+    } else {
+      // Scrolling up
+      $element.css({ transform: "translateY(0%)" });
+    }
+
+    lastScrollTop = currentScroll;
+  });
+
+  // $(window).on("scroll", function () {
+  //   const currentScroll = $(this).scrollTop();
+  //   if (currentScroll > lastScrollTop) {
+  //     alert("scroll down");
+  //     // Scrolling down
+  //     $("#js-contact").addClass("hidden").fadeOut();
+  //   } else {
+  //     // Scrolling up
+  //     $("#js-contact").removeClass("hidden").fadeIn();
+  //   }
+
+  //   lastScrollTop = currentScroll;
+  // });
+}
+
 function slickGallery() {
   const $slickGallery = $(".slick");
 
@@ -150,6 +183,7 @@ function slickGallery() {
 
 $(document).ready(() => {
   slider();
+  scroller();
   toggleMainNavigation();
   heroVideo();
   slickGallery();
