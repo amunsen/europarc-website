@@ -48,7 +48,7 @@
     </div>
   <?php endif; ?>
 <?php else: ?>
-  <div class="slick relative" data-slick='{"lazyLoad": "ondemand", "slidesToShow": 1, "slidesToScroll": 1}'>
+  <div class="js-slick-gallery slick relative" data-slick='{"lazyLoad": "ondemand", "slidesToShow": 1, "slidesToScroll": 1}'>
     <?php foreach ($block->image()->toStructure() as $image): ?>
       <div class="teaser">
         <?php if ($i = $image->image()->toFile()): ?>
