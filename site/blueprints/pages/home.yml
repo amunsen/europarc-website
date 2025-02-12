@@ -6,6 +6,12 @@ tabs:
     label: Content
     icon: text
     columns:
+      meta:
+        type: fields
+        fields:
+          metaDescription:
+            label: Meta Description
+            type: text
       main:
         type: fields
         fields:

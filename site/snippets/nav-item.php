@@ -7,12 +7,12 @@
 <a href="<?php echo $link->href() ?>" target="_blank" class="group flex flex-col col-span-1 sm:col-span-1 lg:col-span-2">
   <div class="flex flex-col gap-3 mb-5">
     <?php if ($i = $myBlock->image()->toFile()): ?>
-            <img loading="lazy" class="w-full h-[120px] lg:h-[240px] object-cover" src="<?php echo $i->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $i->alt()->esc() ?>">
+            <img loading="lazy" class="w-full h-[80px] sm:h-[140px] lg:h-[240px] object-cover" src="<?php echo $i->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $i->alt()->esc() ?>">
     <?php endif; ?>
     <p class="h4 font-semibold group-hover:-translate-y-4 transition-transform mt-6">
       <?php echo $myBlock->headlinei() ?>&nbsp;<?php echo $myBlock->headlineii() ?>
     </p>
-    <p class="font-small font-semibold group-hover:-translate-y-4 transition-transform">
+    <p class="hidden md:block font-small font-semibold group-hover:-translate-y-4 transition-transform">
       <?php echo $myBlock->description() ?>
     </p>
   </div>
