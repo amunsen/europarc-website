@@ -1,5 +1,5 @@
 <?php snippet('container', slots: true)?>
-  <div class="my-8 sm:my-16 lg:my-24">
+  <div class="my-8 sm:my-16 lg:mt-0">
     <div id="map"></div>
   </div>
 <?php endsnippet()?>

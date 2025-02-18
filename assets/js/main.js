@@ -171,7 +171,7 @@ function slickGallery() {
 
 $(document).ready(() => {
   slider();
-  scroller();
+  //scroller();
   toggleMainNavigation();
   heroVideo();
   slickGallery();
