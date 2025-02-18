@@ -2,7 +2,7 @@
   <div class="flex-1 lg:flex-initial flex flex-col lg:flex-col lg:justify-center gap-2 sm:gap-8 lg:gap-10">
     <div class="flex-1 sm:flex-initial flex flex-col justify-center gap-3 lg:gap-6">
       <h2><?php echo $slider->title() ?></h2>
-      <p class="font-medium font-small">
+      <p class="font-small">
         <?php echo $slider->description() ?>
       </p>
     </div>
@@ -10,7 +10,7 @@
   <div class="flex items-center h-full lg:h-auto">
     <?php if ($i = $slider->thumb()->toFile()): ?>
       <img
-        class="js-image-iso-img w-40 h-40 md:w-48 md:h-48 lg:w-auto lg:h-auto"
+        class="js-image-iso-img w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-auto lg:h-auto"
         src="<?php echo $i->url() ?>" alt="<?php echo $slider->headlinei() . $slider->headlineii() ?>"
       />
     <?php endif; ?>

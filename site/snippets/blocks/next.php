@@ -5,9 +5,9 @@
     >
     <div class="relative z-30">
       <?php snippet('container', slots: true)?>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-12 lg:gap-16 xl:gap-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-12 lg:gap-16 xl:gap-24">
           <header class="col-span-1 md:col-span-1 lg:col-span-2 flex h-full">
-            <div class="flex flex-col justify-center gap-6">
+            <div class="flex flex-col justify-center gap-6 pb-4 md:pb-14 lg:pb-0">
               <h2 class="group-hover:-translate-y-4 transition-transform pt-14 lg:pt-0">
                 <?php echo $block->headlinei() ?>
                 <br/>
@@ -20,7 +20,9 @@
             </div>
           </header>
           <?php if ($i = $block->image()->toFile()): ?>
-            <img loading="lazy" class="col-span-1 md:col-span-2 lg:col-span-3 w-full h-[240px] md:h-[320px] lg:h-[608px] my-8 object-cover" src="<?php echo $i->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $i->alt()->esc() ?>">
+            <div class="col-span-1 md:col-span-1 lg:col-span-3 w-full h-[240px] md:h-[320px] lg:h-[608px] mb-8 md:my-8 object-cover">
+              <?php snippet('image', ['image' => $i])?>
+          </div>
           <?php endif; ?>
         </div>
 <?php endsnippet()?>

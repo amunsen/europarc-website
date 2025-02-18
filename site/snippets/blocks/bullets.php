@@ -6,15 +6,15 @@
           <?php snippet('icons/' . $bullet->icon())?>
           <div class="flex flex-col gap-2">
             <h4 class="font-medium line-height-tight">
-              <span class="truncate"><?php echo $bullet->titlei()?></span>
+              <span class="truncate"><?php echo $bullet->titlei() ?></span>
               <br/>
-              <span class="truncate"><?php echo $bullet->titleii()?></span>
+              <span class="truncate"><?php echo $bullet->titleii() ?></span>
             </h4>
             <?php if ($bullet->descriptionshown()): ?>
               <p
                 class="w-full max-w-sm sm:block text-sm"
               >
-                <?php echo $bullet->description()?>
+                <?php echo $bullet->description() ?>
               </p>
             <?php endif?>
           </div>

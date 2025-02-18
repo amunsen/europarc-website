@@ -24,7 +24,6 @@
 <?php endforeach?>
           </div>
             <div class="flex-1 mt-4">
-              <hr class="w-full h-[1px] bg-cararra-100" />
               <div class="flex flex-col lg:flex-row justify-between gap-4 mt-4">
                 <?php $index = 0?>
 <?php foreach ($block->specs()->toStructure() as $spec): ?>

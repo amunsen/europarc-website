@@ -1,4 +1,4 @@
-<section class="w-screen overflow-hidden">
+<section class="w-full overflow-hidden">
 <div class="mt-4 sm:mt-8 lg:mt-12">
   <?php snippet('container', slots: true)?>
       <!-- Title Section -->
@@ -16,12 +16,9 @@
         <?php if ($block->bullets()->isNotEmpty()): ?>
         <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-12 lg:gap-16 xl:gap-24">
             <?php foreach ($block->bullets()->toStructure() as $bullet): ?>
-              <div class="cols-span-1 flex flex-col gap-3">
-                <?php if ($bullet->meta()->isNotEmpty()): ?>
-                  <h3 class="font-small font-semibold"><?php echo $bullet->meta() ?></h3>
-                <?php else: ?>
-                  <br class="hidden sm:block"/>
-  <?php endif; ?>
+              <div class="cols-span-1 flex flex-col gap-6">
+              <?php snippet('icons/' . $bullet->icon())?>
+              <div class="flex flex-col gap-2">
                 <h4 class="font-medium line-height-tight">
                   <span class="truncate"><?php echo $bullet->titlei() ?></span>
                   <br/>
@@ -30,6 +27,7 @@
                 <p class="w-full max-w-sm sm:block text-sm">
                   <?php echo $bullet->description() ?>
                 </p>
+              </div>
               </div>
             <?php endforeach?>
         </div>
@@ -52,8 +50,8 @@
     <?php foreach ($block->image()->toStructure() as $image): ?>
       <div class="teaser">
         <?php if ($i = $image->image()->toFile()): ?>
-          <img loading="lazy" class="w-full h-full object-cover" src="<?php echo $i->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $image->alt()->esc() ?>">
-        <?php endif; ?>
+<?php snippet('image', ['image' => $i])?>
+<?php endif; ?>
       </div>
     <?php endforeach?>
   </div>

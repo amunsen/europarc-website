@@ -20,15 +20,9 @@
           autoplay muted loop playsinline>
     </video>
   <?php else: ?>
-<?php
-    $sizes = "(min-width: 1200px) 25vw,
-    (min-width: 900px) 33vw,
-    (min-width: 600px) 50vw,
-    100vw";
-?>
 <?php if ($image = $block->image()->toFile()): ?>
-      <img class="w-full h-full object-cover" src="<?php echo $image->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $image->alt()->esc() ?>">
-    <?php endif; ?>
+<?php snippet('image', ['image' => $image])?>
+<?php endif; ?>
 <?php endif; ?>
 </div>
 <div class="max-w-screen-xl mx-auto mt-4 sm:mt-8 lg:mt-12">

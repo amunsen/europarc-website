@@ -11,7 +11,7 @@
           <p class="h4 font-medium text-cararra-950">
             <?php echo $block->description() ?>
           </p>
-          <p class="p font-medium text-cararra-950">
+          <p class="p text-cararra-950">
             <?php echo $block->detaildescription() ?>
           </p>
         </div>
@@ -43,8 +43,8 @@
 <?php foreach ($block->slider()->toStructure() as $slider): ?>
 <?php if ($i = $slider->image()->toFile()): ?>
             <div style="z-index:<?php echo 5 - $index ?>" class="js-image-wrapper absolute top-0 left-0 w-full h-full overflow-hidden">
-              <img loading="lazy" class="js-image-wrapper-img w-full h-full object-cover" src="<?php echo $i->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $i->alt()->esc() ?>">
-              <?php $index++?>
+            <?php snippet('image', ['image' => $i])?>
+<?php $index++?>
             </div>
           <?php endif; ?>
 <?php endforeach; ?>

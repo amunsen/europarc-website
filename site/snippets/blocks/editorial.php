@@ -1,4 +1,4 @@
-<div class="py-8 sm:py-8 sm:pt-8 lg:py-20 lg:pt-10 bg-cararra-100">
+<div class="py-8 pb-16 sm:py-16 sm:pt-8 lg:py-16 lg:pt-10 bg-cararra-100">
   <div>
     <?php snippet('container', slots: true)?>
         <!-- Title Section -->
@@ -21,8 +21,8 @@
       100vw";
   ?>
 <?php if ($image = $block->image()->toFile()): ?>
-        <img class="w-full h-full object-cover" src="<?php echo $image->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $image->alt()->esc() ?>">
-      <?php endif; ?>
+<?php snippet('image', ['image' => $image])?>
+<?php endif; ?>
   </div>
   <div class="max-w-screen-xl mx-auto mt-4">
     <?php snippet('container', slots: true)?>

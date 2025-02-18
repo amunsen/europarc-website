@@ -17,6 +17,19 @@ fields:
       classes:
         label: Classes
         type: text
+      icon:
+        label: Icon
+        type: select
+        options:
+          - arrowRight
+          - arrowUpRight
+          - close
+          - sparkling
+          - transform
+          - infrastructure
+          - mobility
+          - companies
+          - park
       meta:
         label: Meta
         type: text

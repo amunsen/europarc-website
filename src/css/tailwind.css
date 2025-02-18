@@ -94,6 +94,7 @@
 }
 
 body {
+  position: relative;
   font-family: "Satoshi", sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -407,7 +408,11 @@ p {
 .hero,
 .teaser {
   width: 100vw;
-  height: 72vh;
+  height: 40vh;
+
+  @media screen(lg) {
+    height: 64vh;
+  }
 
   @media screen(lg) {
     height: 80vh;

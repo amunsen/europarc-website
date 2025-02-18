@@ -15,7 +15,6 @@ fields:
       - mobility
       - companies
       - park
-  # image?: IImage;
   bulletimage:
     label: Stage Image
     type: files

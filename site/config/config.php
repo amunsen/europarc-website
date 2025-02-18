@@ -2,6 +2,13 @@
 return [
     'debug'     => true,
     'languages' => true,
+    'hooks'     => [
+        'file.create:after' => function ($file) {
+            if ($file->isResizable()) {
+                $file->resize(2000);
+            }
+        },
+    ],
     'thumbs'    => [
         'srcsets' => [
             'default' => [

@@ -679,12 +679,24 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .block {
   display: block;
 }
 
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .grid {
@@ -699,8 +711,8 @@ video {
   height: 3rem;
 }
 
-.h-40 {
-  height: 10rem;
+.h-28 {
+  height: 7rem;
 }
 
 .h-6 {
@@ -713,10 +725,6 @@ video {
 
 .h-\[100px\] {
   height: 100px;
-}
-
-.h-\[1px\] {
-  height: 1px;
 }
 
 .h-\[240px\] {
@@ -739,16 +747,16 @@ video {
   width: 3rem;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
 
 .w-36 {
   width: 9rem;
-}
-
-.w-40 {
-  width: 10rem;
 }
 
 .w-5 {
@@ -775,6 +783,10 @@ video {
   width: 100vw;
 }
 
+.max-w-\[560px\] {
+  max-width: 560px;
+}
+
 .max-w-screen-xl {
   max-width: 1280px;
 }
@@ -799,6 +811,10 @@ video {
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
 }
 
 .grid-cols-1 {
@@ -855,6 +871,10 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-y-1 {
@@ -986,6 +1006,10 @@ video {
   padding-bottom: 3rem;
 }
 
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1020,6 +1044,14 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -1061,10 +1093,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .antialiased {
@@ -1241,6 +1269,7 @@ video {
 }
 
 body {
+  position: relative;
   font-family: "Satoshi", sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -1555,7 +1584,10 @@ p {
 .hero,
 .teaser {
   width: 100vw;
-  height: 72vh;
+  height: 40vh;
+  @media (min-width: 1024px) {
+    height: 64vh;
+  }
   @media (min-width: 1024px) {
     height: 80vh;
   }
@@ -1642,8 +1674,16 @@ p {
     display: block;
   }
 
+  .sm\:h-32 {
+    height: 8rem;
+  }
+
   .sm\:h-\[140px\] {
     height: 140px;
+  }
+
+  .sm\:w-32 {
+    width: 8rem;
   }
 
   .sm\:flex-initial {
@@ -1724,6 +1764,11 @@ p {
     grid-column: span 2 / span 2;
   }
 
+  .md\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .md\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -1752,6 +1797,10 @@ p {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1776,6 +1825,10 @@ p {
   .md\:pb-12 {
     padding-bottom: 3rem;
   }
+
+  .md\:pb-14 {
+    padding-bottom: 3.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1795,6 +1848,11 @@ p {
   .lg\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
+  }
+
+  .lg\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .lg\:mb-24 {
@@ -1923,14 +1981,14 @@ p {
     padding-bottom: 3rem;
   }
 
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .lg\:py-6 {
@@ -1941,6 +1999,11 @@ p {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .lg\:pb-16 {
@@ -1957,6 +2020,10 @@ p {
 
   .lg\:pt-40 {
     padding-top: 10rem;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 }
 
