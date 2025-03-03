@@ -1,3 +1,4 @@
+<?php $fullLang = str_replace('/' . kirby()->language()->code(), '', kirby()->site()->url())?>
 <div class="mt-4 sm:mt-8 lg:mt-12">
   <?php snippet('container', slots: true)?>
       <!-- Title Section -->
@@ -13,9 +14,9 @@
 </div>
 <!-- Image Section -->
 <div class="relative hero w-screen bg-gray-600">
-  <?php if ($block->video()->toBool() === true): ?>
+<?php if ($block->video()->toBool() === true): ?>
     <div class="absolute top-0 left-0 w-full h-full bg-transparent"></div>
-    <video class="hero-video w-full h-full object-cover" preload="none" src="<?php echo $site->url() ?>/assets/videos/<?php echo $block->videofile() ?>"
+    <video class="hero-video w-full h-full object-cover" preload="none" src="<?php echo $fullLang ?>/assets/videos/<?php echo $block->videofile() ?>"
           poster="<?php echo $block->image()->toFile()->url() ?>"
           autoplay muted loop playsinline>
     </video>

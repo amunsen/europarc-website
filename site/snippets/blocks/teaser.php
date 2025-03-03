@@ -1,3 +1,4 @@
+<?php $fullLang = str_replace('/' . kirby()->language()->code(), '', kirby()->site()->url())?>
 <section class="w-full overflow-hidden">
 <div class="mt-4 sm:mt-8 lg:mt-12">
   <?php snippet('container', slots: true)?>
@@ -39,7 +40,7 @@
 <?php if ($i = $block->videocover()->toFile()): ?>
     <div id="teaser-video" class="teaser-video relative">
       <div class="absolute top-0 left-0 w-full h-full bg-transparent"></div>
-      <video class="teaser object-cover" preload="none" src="<?php echo $site->url() ?>/assets/videos/<?php echo $block->videofile() ?>"
+      <video class="teaser object-cover" preload="none" src="<?php echo $fullLang ?>/assets/videos/<?php echo $block->videofile() ?>"
             poster="<?php echo $i->url() ?>"
             muted loop playsinline>
       </video>

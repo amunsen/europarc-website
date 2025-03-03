@@ -1,5 +1,5 @@
 <img
-      class="w-full h-full object-cover"
+      class="js-image-wrapper-img w-full h-full object-cover"
       src="<?php echo $image->thumb(['width' => 800])->url() ?>"
       alt="<?php echo $image->alt()->esc() ?>"
       srcset="
