@@ -13,7 +13,7 @@
                         <?php foreach ($kirby->languages() as $language): ?>
 <?php if ($kirby->language() != $language->code()): ?>
                             <li<?php e($kirby->language() == $language, ' class="active"')?>>
-                              <a class="font-semibold uppercase" href="<?php echo $language->url() ?>" hreflang="<?php echo $language->code() ?>">
+                              <a class="font-semibold uppercase" href="<?php echo $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
                                 <?php echo html($language->code()) ?>
                               </a>
                             </li>
