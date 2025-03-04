@@ -10,27 +10,28 @@ const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
     : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
 };
 
-// e.g. 100x100 viewport and a 10x10px element at position
-// {top: -1, left: 0, bottom: 9, right: 10}
-
-function heroVideo() {
-  if ($(".hero-video")) {
-    $(".hero-video").each(function () {
-      this.loop = false;
-      this.onended = function () {
-        this.load();
-      };
-      this.play();
-    });
-  }
-}
+// function heroVideo() {
+//   if ($(".hero-video")) {
+//     $(".hero-video").each(function () {
+//       this.loop = false;
+//       this.onended = function () {
+//         this.load();
+//       };
+//       this.play();
+//     });
+//   }
+// }
 
 function teaserVideo() {
   const video = false;
+  //const videoElem = $("#video-teaser-elem");
   if (document.getElementById("teaser-video")) {
+    const videoElemPoster = $("#teaser-video-elem-poster");
+
     $(window).on("scroll", () => {
       if (elementIsVisibleInViewport(document.getElementById("teaser-video"))) {
-        !video && $("#teaser-video").find("video").get(0).play();
+        videoElemPoster.addClass("loaded");
+        $("#teaser-video").find("video").get(0).play();
       }
     });
   }
@@ -169,11 +170,26 @@ function slickGallery() {
   });
 }
 
+function video() {
+  const video = $("#video-hero");
+
+  if (video.length) {
+    video.on("canplay", function () {
+      const videoContainer = $("#video-hero-poster");
+      videoContainer.addClass("loaded"); // Smoothly fade in video
+      this.play(); // Start playing
+    });
+  } else {
+    console.error("Video element not found");
+  }
+}
+
 $(document).ready(() => {
   slider();
   //scroller();
+  video();
   toggleMainNavigation();
-  heroVideo();
+  //heroVideo();
   slickGallery();
   teaserVideo();
 });

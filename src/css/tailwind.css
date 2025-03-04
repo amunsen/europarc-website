@@ -467,3 +467,13 @@ p {
   width: 100%;
   height: 100%;
 }
+
+#video-hero-poster,
+#teaser-video-elem-poster {
+  transition: opacity 0.24s ease-in-out;
+}
+
+#video-hero-poster.loaded,
+#teaser-video-elem-poster.loaded {
+  opacity: 0;
+}
