@@ -13,7 +13,7 @@
     </header>
     <?php snippet('grid', slots: true)?>
 <?php snippet('vacancy', ['target' => 'https://www.immobilienscout24.de/expose/144080519#/', 'source' => 'https://pictures.immobilienscout24.de/listings/f54532a4-013d-489b-91a9-335ca890af9b-1638163685.jpg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73', 'title' => 'Gastronomiefläche mit Außenterrasse'])?>
-<?php snippet('vacancy', ['target' => 'https://www.immobilienscout24.de/expose/82371809#/', 'source' => 'https://pictures.immobilienscout24.de/listings/4a9bca2d-1fe2-4324-ab1e-86ec00a13890-1860905942.png/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73', 'title' => 'Büroräume mit Sonnenterrasse im Europarc- Der Markenstandort'])?>
+<?php snippet('vacancy', ['target' => 'https://www.immobilienscout24.de/expose/82371809#/', 'source' => 'https://pictures.immobilienscout24.de/listings/811bee90-a89f-49bd-8b94-4d706c316831-1881924309.jpg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73', 'title' => 'Büroräume mit Sonnenterrasse im Europarc- Der Markenstandort'])?>
 <?php snippet('vacancy', ['target' => 'https://www.immobilienscout24.de/expose/139531731#/', 'source' => 'https://pictures.immobilienscout24.de/listings/1324983f-1c22-443a-87d3-af60d75f2e13-1593784935.jpg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73', 'title' => 'Modernes Büro mit Sonnenterrasse in Top-Lage und günstigem Gewerbesteuerhebesatz'])?>
 <?php snippet('vacancy', ['target' => 'https://www.immobilienscout24.de/expose/116205818#/', 'source' => 'https://pictures.immobilienscout24.de/listings/6df06512-7fee-49e1-bee4-89f095f86ea5-1715139720.jpg/ORIG/legacy_thumbnail/1024x768/format/webp/quality/73', 'title' => 'Work in the woods - Modernes Büro- auch als Co-Working in Top-Lage'])?>
 <?php endsnippet()?>
