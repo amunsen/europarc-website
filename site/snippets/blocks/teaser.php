@@ -40,9 +40,8 @@
 <?php if ($i = $block->videocover()->toFile()): ?>
     <div id="teaser-video" class="teaser-video relative">
       <div class="absolute z-40 top-0 left-0 w-full h-full bg-transparent"></div>
-      <div id="teaser-video-elem-poster" style="background: url(<?php echo $i->url() ?>)" class="absolute z-30 top-0 left-0 w-full h-full bg-transparent"></div>
       <video id="teaser-video-elem" class="teaser object-cover" preload="none" src="<?php echo $fullLang ?>/assets/videos/<?php echo $block->videofile() ?>"
-            poster="<?php echo $i->url() ?>"
+            poster="<?php echo $fullLang ?>/assets/videos/europarc_still_002.jpg"
             muted loop playsinline>
       </video>
     </div>

@@ -13,13 +13,16 @@
   <?php endsnippet()?>
 </div>
 <!-- Image Section -->
-<div class="relative hero w-screen bg-cararra-600">
+<div class="relative w-screen bg-white">
 <?php if ($block->video()->toBool() === true): ?>
   <div class="absolute z-40 top-0 left-0 w-full h-full bg-transparent"></div>
-    <div id="video-hero-poster" style="background: url(<?php echo $block->image()->toFile()->url() ?>)" class="absolute z-30 top-0 left-0 w-full h-full"></div>
-    <video id="video-hero" class="hero-video relative z-10 w-full h-full object-cover" preload="none" src="<?php echo $fullLang ?>/assets/videos/<?php echo $block->videofile() ?>"
-          autoplay muted loop playsinline>
-    </video>
+
+    <div class="video-container">
+      <video id="video-hero" poster="<?php echo $fullLang ?>/assets/videos/europarc_still_001.jpg" autoplay muted loop playsinline>
+          <source src="<?php echo $fullLang ?>/assets/videos/<?php echo $block->videofile() ?>" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+    </div>
   <?php else: ?>
 <?php if ($image = $block->image()->toFile()): ?>
 <?php snippet('image', ['image' => $image])?>
