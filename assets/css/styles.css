@@ -916,11 +916,6 @@ video {
   background-color: rgb(236 238 231 / var(--tw-bg-opacity, 1));
 }
 
-.bg-cararra-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(129 130 93 / var(--tw-bg-opacity, 1));
-}
-
 .bg-cararra-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(42 40 30 / var(--tw-bg-opacity, 1));
