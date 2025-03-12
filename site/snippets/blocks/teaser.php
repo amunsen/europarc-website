@@ -44,7 +44,7 @@
             poster="<?php echo $fullLang ?>/assets/videos/europarc_still_002.jpg"
             muted loop playsinline>
       </video>
-      <img class="absolute z-10 top-0 left-0 w-full h-full object-cover" src="<?php echo $fullLang ?>/assets/videos/europarc_still_002.jpg"></div>
+      <img class="absolute z-10 top-0 left-0 w-full h-full object-cover" src="<?php echo $fullLang ?>/assets/videos/europarc_still_002.jpg">
     </div>
   <?php endif; ?>
 <?php else: ?>

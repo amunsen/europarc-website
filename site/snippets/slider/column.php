@@ -1,4 +1,4 @@
-<div style="z-index:<?php echo $zIndex ?>" class="js-image-iso flex flex-row-reverse lg:flex-col justify-between lg:justify-around absolute top-1/2 left-0 -translate-y-1/2 w-full h-full overflow-hidden bg-cararra-100 p-2 sm:p-10 lg:p-14 gap-4 sm:gap-8 lg:gap-12">
+<div style="z-index:<?php echo $zIndex ?>" class="js-image-iso slider-column flex flex-row-reverse lg:flex-col justify-between lg:justify-around absolute top-1/2 left-0 -translate-y-1/2 w-full h-full overflow-hidden bg-cararra-100 p-2 sm:p-10 lg:p-14 gap-4 sm:gap-8 lg:gap-12">
   <div class="flex-1 lg:flex-initial flex flex-col lg:flex-col lg:justify-center gap-2 sm:gap-8 lg:gap-10">
     <div class="flex-1 sm:flex-initial flex flex-col justify-center gap-3 lg:gap-6">
       <h2><?php echo $slider->title() ?></h2>

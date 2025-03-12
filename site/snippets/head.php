@@ -75,7 +75,6 @@
   <div>
     <?php snippet('main-header')?>
     <div class="flex flex-col">
-      <main class="flex-grow">
-        <div id="main">
+      <main id="main" class="flex-grow">
 
 

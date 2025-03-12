@@ -1574,6 +1574,8 @@ p {
   height: 40vh;
   @media (min-width: 1024px) {
     height: 64vh;
+
+    min-height: 720px;
   }
   @media (min-width: 1024px) {
     height: 80vh;
