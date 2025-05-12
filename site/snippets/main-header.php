@@ -1,4 +1,4 @@
-<div class="w-full relative z-50 bg-white">
+<div style="z-index:70" class="w-full relative bg-white">
   <div class="py-4 lg:py-8">
     <?php snippet('container', slots: true)?>
       <div class="flex">
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div style="transform:translateY(-100%)" id="js-menu-panel" class="z-40 absolute top-0 left-0 bg-cararra-100 pt-24 sm:pt-32 lg:pt-40 py-12 sm:py-16 lg:py-24 w-dvw transition-transform duration-[0.72s]">
+<div style="transform:translateY(-100%); z-index: 60" id="js-menu-panel" class="absolute top-0 left-0 bg-cararra-100 pt-24 sm:pt-32 lg:pt-40 py-12 sm:py-16 lg:py-24 w-dvw transition-transform duration-[0.72s]">
 <?php snippet('container', slots: true)?>
 <div class="flex flex-col md:flex-row justify-center gap-8">
 <?php if (! $page->is('home')): ?>

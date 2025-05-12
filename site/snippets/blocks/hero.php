@@ -16,8 +16,8 @@
 <div class="relative w-screen hero bg-white overflow-hidden">
 <?php if ($block->video()->toBool() === true): ?>
   <div class="absolute z-40 top-0 left-0 w-full h-full bg-transparent"></div>
-    <div class="video-container">
-      <video style="width: 100%" id="video-hero" poster="<?php echo $fullLang ?>/assets/videos/europarc_still_001.jpg" autoplay muted loop playsinline>
+    <div class="video-container h-full">
+      <video style="width: 100%" id="video-hero" class="h-full object-cover" poster="<?php echo $fullLang ?>/assets/videos/europarc_still_001.jpg" autoplay muted loop playsinline>
           <source src="<?php echo $fullLang ?>/assets/videos/<?php echo $block->videofile() ?>" type="video/mp4">
           Your browser does not support the video tag.
       </video>
