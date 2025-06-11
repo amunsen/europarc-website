@@ -1,1 +1,5 @@
 Alt: Rendering einer möglichen Ausstattung des Erdgeschosses als Lobby oder Empfangshalle. Zu sehen ist ein länglicher Flur, im Hintergrund eine großes Fenster und weitere Bürogebäude.
+
+----
+
+Uuid: pRkfQDw71UDIWKcM

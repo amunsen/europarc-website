@@ -4,7 +4,7 @@
 ?>
 
 <?php foreach ($myBlock->link()->toStructure() as $link): ?>
-<a href="<?php echo site()->url('en') . '/' . $link->href() ?>" class="flex-1 group flex flex-col col-span-1 sm:col-span-1 lg:col-span-2 max-w-[560px]">
+<a href="<?php echo '/' . $link->href() ?>" class="flex-1 group flex flex-col col-span-1 sm:col-span-1 lg:col-span-2 max-w-[560px]">
   <div class="flex flex-col gap-3 mb-5">
     <?php if ($i = $myBlock->image()->toFile()): ?>
             <img loading="lazy" class="w-full h-[100px] sm:h-[140px] lg:h-[240px] object-cover" src="<?php echo $i->thumb(['format' => 'webp', 'quality' => 60])->url() ?>" alt="<?php echo $i->alt()->esc() ?>">

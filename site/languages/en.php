@@ -2,7 +2,7 @@
 
 return [
     'code'         => 'en',
-    'default'      => true,
+    'default'      => false,
     'direction'    => 'ltr',
     'locale'       => [
         'LC_ALL' => 'en_US',
@@ -11,5 +11,5 @@ return [
     'translations' => [
 
     ],
-    'url'          => '/',
+    'url'          => null,
 ];

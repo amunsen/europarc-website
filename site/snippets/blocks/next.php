@@ -1,6 +1,6 @@
 <?php foreach ($block->link()->toStructure() as $link): ?>
   <a
-  href="<?php echo site()->url('en') . '/' . $link->href() ?>"
+  href="<?php echo '/' . $link->href() ?>"
       class="group bg-cararra-100 block w-full relative"
     >
     <div class="relative z-30">
