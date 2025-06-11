@@ -26,15 +26,22 @@
 											<strong>EUROPARC Dreilinden GmbH</strong>
 										</a>
 										<span>
-											Albert-Einstein-Ring 15<br/>
+											Albert-Einstein-Ring 11<br/>
 											14532 Kleinmachnow
 										</span>
 									</address>
 								</div>
 							</div>
 							<div class="flex flex-col items-center md:flex-row gap-3 gap-y-1 justify-between pt-6">
-								© EUROPARC Dreilinden GMBH								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                            <?php echo date('Y') ?>
+								© Europarc Dreilinden GmbH								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                           								                            <?php echo date('Y') ?>
 								<span class="flex gap-3">
+									<a href="#" onClick="UC_UI.showSecondLayer();">
+									<?php if (kirby()->language()->code() === 'en'): ?>
+										Privacy Settings
+									<?php elseif (kirby()->language()->code() === 'de'): ?>
+										Datenschutzeinstellungen
+									<?php endif; ?>
+									</a>
 									<a href="<?php echo $pages->find('legal')->url() ?>">
 										<?php echo $pages->find('legal')->title() ?>
 									</a>

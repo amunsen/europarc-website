@@ -2,8 +2,8 @@
   <div>
     <?php snippet('container', slots: true)?>
         <!-- Title Section -->
-        <div class="flex flex-col gap-y-3 py-6 pb-12 sm:py-8 sm:pb-16">
-          <h2 class="text-cararra-950">
+        <div class="flex flex-col gap-y-3 py-6 pb-12 sm:py-8">
+          <h2 class="text-cararra-950 pb-4">
             <?php echo $block->headline() ?>
             <br/>
             <?php echo $block->headlineii() ?>
@@ -12,17 +12,19 @@
     <?php endsnippet()?>
   </div>
   <!-- Image Section -->
-  <div class="relative hero w-screen bg-gray-600">
+  <div class="max-w-screen-xl mx-auto">
 
-  <?php
-      $sizes = "(min-width: 1200px) 25vw,
+<?php snippet('container', slots: true)?>
+<?php
+    $sizes = "(min-width: 1200px) 25vw,
       (min-width: 900px) 33vw,
       (min-width: 600px) 50vw,
       100vw";
-  ?>
+?>
 <?php if ($image = $block->image()->toFile()): ?>
 <?php snippet('image', ['image' => $image])?>
 <?php endif; ?>
+<?php endsnippet()?>
   </div>
   <div class="max-w-screen-xl mx-auto mt-4">
     <?php snippet('container', slots: true)?>

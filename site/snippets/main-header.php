@@ -37,9 +37,9 @@
 <?php snippet('container', slots: true)?>
 <div class="flex flex-col md:flex-row justify-center gap-8">
 <?php if (! $page->is('home')): ?>
-<?php snippet('nav-item', ['target' => 'current-campus'])?>
+<?php snippet('nav-item', ['target' => 'future-campus'])?>
 <?php endif?>
-<?php if (! $page->is('current-campus')): ?>
+<?php if (! $page->is('future-campus')): ?>
 <?php snippet('nav-item', ['target' => 'home'])?>
 <?php endif?>
 </div>

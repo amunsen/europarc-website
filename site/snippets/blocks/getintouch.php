@@ -1,4 +1,4 @@
-<div class="mt-4 sm:mt-8 lg:mt-12">
+<div id="get-in-touch" class="mt-4 sm:mt-8 lg:mt-12">
   <?php snippet('container', slots: true)?>
       <!-- Title Section -->
       <div class="flex flex-col gap-6 md:gap-8 py-6 pb-12 sm:py-8 sm:pb-16 items-center">

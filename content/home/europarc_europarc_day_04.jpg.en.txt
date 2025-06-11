@@ -1,5 +1,1 @@
-Alt: Photorealistic render of the planned buildings at the new campus of Europarc Dreilinden, showing offices surrounded by plants and water.
-
-----
-
-Uuid: gUPFnhfqZ5RpVVxI
+Uuid: sY6YuZDVwrqNzHT4

@@ -1,15 +1,16 @@
 <?php
 return [
-    'debug'     => true,
-    'languages' => true,
-    'hooks'     => [
+    'debug'            => false,
+    'languages'        => true,
+    'languages.detect' => true,
+    'hooks'            => [
         'file.create:after' => function ($file) {
             if ($file->isResizable()) {
                 $file->resize(2000);
             }
         },
     ],
-    'thumbs'    => [
+    'thumbs'           => [
         'srcsets' => [
             'default' => [
                 '300w'  => ['width' => 900],

@@ -1,5 +1,1 @@
-Alt: Logo of the Liebherr company.
-
-----
-
-Uuid: FOWTID7EGVyp7FsQ
+Uuid: sOyKWbjhxlLEtpv6

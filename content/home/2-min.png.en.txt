@@ -1,5 +1,0 @@
-Alt: Render of a building blueprint to be erected at the new campus of Europarc Dreilinden. highlighting a single floor.
-
-----
-
-Uuid: qnvh3D01MTTzQyQ7

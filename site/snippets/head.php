@@ -57,18 +57,49 @@
   <meta name="robots" content="index, follow">
 
 
+
+
+
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
 
   <?php echo css('assets/css/styles.css') ?>
-<?php echo js('assets/js/lazyload.min.js') ?>
-<?php echo js('assets/js/jquery.min.js') ?>
-<?php echo js('assets/js/slick.min.js') ?>
-<?php echo js('assets/js/main.js') ?>
+<?php echo js('assets/js/lazyload.min.js', ['data' => [
+        'usercentrics' => 'true',
+        'category'     => 'essential',
+]]) ?>
+<?php echo js('assets/js/jquery.min.js', ['data' => [
+        'usercentrics' => 'true',
+        'category'     => 'essential',
+]]) ?>
+<?php echo js('assets/js/gsap.min.js', ['data' => [
+        'usercentrics' => 'true',
+        'category'     => 'essential',
+]]) ?>
+<?php echo js('assets/js/ScrollTrigger.min.js', ['data' => [
+        'usercentrics' => 'true',
+        'category'     => 'essential',
+]]) ?>
+<?php echo js('assets/js/slick.min.js', ['data' => [
+        'usercentrics' => 'true',
+        'category'     => 'essential',
+]]) ?>
+<?php echo js('assets/js/main.js', ['data' => [
+        'usercentrics' => 'true',
+        'category'     => 'essential',
+]]) ?>
+
+<script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="ZymCk7bSAF-3OW" data-language="<?php echo $kirby->language()?->code() ?>" async></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZHKNZ0TW7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5ZHKNZ0TW7');
+</script>
 </head>
 
 <body class="min-h-screen antialiased overflow-x-clip">
